@@ -33,3 +33,49 @@ footer {
     justify-content: flex-end;
     background-color: var(--footer-background);
 }
+
+.images {
+    display:flex;
+}
+
+.image {
+    display:flex;
+    max-width: 300px;
+}
+
+.grid {
+    display:grid;
+    grid-template-rows: 15% 35% 10% 10% 30%;
+}
+
+.box {
+    background-color:blanchedalmond;
+    border: 2px blueviolet solid;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px;
+}
+
+.a {
+
+}
+
+.b {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.c {
+    display:grid;
+    grid-template-columns: 1fr 1fr ;
+}
+
+.d {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.e {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
