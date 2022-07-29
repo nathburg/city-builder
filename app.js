@@ -4,6 +4,11 @@ const monumentDropboxEl = document.getElementById("monument-selection");
 const skylineImgEl = document.getElementById("skyline-img");
 const natureImgEl = document.getElementById("nature-img");
 const monumentImgEl = document.getElementById("monument-img");
+const sloganInputEl = document.getElementById("slogan-input");
+const sloganButtonEl = document.getElementById("slogan-button");
+const sloganListEl = document.getElementById("slogans");
+
+let slogans = [];
 
 
 skylineDropboxEl.addEventListener('change', () => {
@@ -19,4 +24,17 @@ natureDropboxEl.addEventListener('change', () => {
 monumentDropboxEl.addEventListener('change', () => {
     const choice = monumentDropboxEl.value;
     monumentImgEl.src = `assets/${choice}.png`;
+})
+
+sloganButtonEl.addEventListener('click', () => {
+    const sloganValue = sloganInputEl.value;
+    slogans.push(sloganValue);
+    sloganListEl.textContent = "";
+    for (let slogan of slogans) {
+        const sloganListItemEl = document.createElement('li');
+        sloganListItemEl.textContent = slogan;
+        sloganListEl.appendChild(sloganListItemEl);
+    }
+
+
 })
