@@ -12,16 +12,59 @@
         href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&family=Titillium+Web:wght@200;400;600&display=swap">
     <link rel="stylesheet" href="/styles/reset.css" />
     <link rel="stylesheet" href="/styles/global.css" />
-    <title>Web App</title>
+    <title>City Builder</title>
 </head>
 
 <body>
     <header>
         <img src="/assets/html_css_js.png">
-        <h1>Web App</h1>
+        <h1>City Builder</h1>
     </header>
 
     <main>
+        <h1 class="welcome" id="welcome">Welcome to</h1>
+        <h2 id="city-name"></h2>
+        <section class="images">
+            <img src="" class="image" id="skyline-img">
+            <img src="" class="image" id="nature-img">
+            <img src="" class="image" id="monument-img">
+        </section>
+        <section class="name-slogan">
+            
+                <input id="name-input">
+                <button id="name-button">Enter city name first</button>
+                <div>
+                    <input id="slogan-input">
+                    <button id="slogan-button">Enter City Slogan</button>
+                </div>
+        </section>
+        <section class="image-selection">
+                <select id="skyline-selection">
+                    <option value="metropolis">Metropolis</option>
+                    <option value="smalltown">Small Town</option>
+                    <option value="bay">Waterfront</option>
+                </select>
+                <select id="nature-selection">
+                    <option value="forest">Forest</option>
+                    <option value="cliffs">Cliffs</option>
+                    <option value="lawn">Lawn</option>
+                </select>
+                <select id="monument-selection">
+                    <option value="triumph">Triumphant</option>
+                    <option value="religious">Religious</option>
+                    <option value="subversive">Subversive</option>
+                </select>
+        </section>
+        <section class="data">
+            <h3>Changes</h3>
+                <p id="counters">You changed Skyline 0 times, Nature 0 times, and Monuments 0 times.</p>
+            <h3>Slogans</h3>
+                <ul id="slogans">
+                </ul>
+        </section>
+
+
+
 
     </main>
 
@@ -31,3 +74,27 @@
 </body>
 
 </html>
+
+<!-- GRID EXPERIMENT -->
+        <!-- <div class = "box a">
+            <div></div>
+        </div>
+        <div class = "box b">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <div class = "box c">
+            <div></div>
+            <div></div>
+        </div>    
+        <div class = "box d">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class = "box e">
+            <div></div>
+            <div></div>
+        </div> -->
