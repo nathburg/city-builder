@@ -8,12 +8,25 @@ const sloganInputEl = document.getElementById("slogan-input");
 const sloganButtonEl = document.getElementById("slogan-button");
 const sloganListEl = document.getElementById("slogans");
 const countersEl = document.getElementById("counters");
+const cityNameEl = document.getElementById("city-name");
+const cityNameInputEl = document.getElementById("name-input");
+const cityNameButtonEl = document.getElementById("name-button");
 
 let slogans = [];
 let skylineCounter = 0;
 let natureCounter = 0;
 let monumentCounter = 0;
+let cityName = '';
 
+sloganButtonEl.disabled = true;
+
+
+cityNameButtonEl.addEventListener('click', () => {
+    cityNameEl.textContent = cityNameInputEl.value;
+    cityName = cityNameInputEl.value;
+    sloganButtonEl.disabled = false;
+    displayCatchphrases();
+})
 
 skylineDropboxEl.addEventListener('change', () => {
     skylineCounter++;
@@ -54,7 +67,12 @@ function displayCatchphrases() {
     sloganInputEl.value = "";
     for (let slogan of slogans) {
         const sloganListItemEl = document.createElement('li');
-        sloganListItemEl.textContent = slogan;
+        sloganListItemEl.textContent = `${cityName}: ${slogan}`;
         sloganListEl.appendChild(sloganListItemEl);
     }
+}
+
+function makeNewCityName() {
+    cityNameEl.textContent = cityNameInputEl.value;
+    cityName = cityNameInputEl.value;
 }
